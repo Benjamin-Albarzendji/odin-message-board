@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div.mainContainer
+    h1= title
+      h4 Welcome to #{title}
+    div.chatContainer
+      each chat in chats
+        div.chatMessageContainer
+          div.chatHeader
+            h3= chat.name
+            div.chatTimeStamp
+              p= chat.timestamp.getFullYear() + '-' + (chat.timestamp.getMonth() + 1) + '-' + chat.timestamp.getDate() + ' ' + chat.timestamp.getHours() + ':' + chat.timestamp.getMinutes() + ':' + chat.timestamp.getSeconds()
+          div.chatBody
+            p= chat.message
+          div.chatFooter
+      div.inputField 
+      form.inputForm(action="/new", method="POST")
+        input(type="text", name="name", placeholder="Name")
+        input(type="text", name="message", placeholder="Message")
+        input(type="submit", value="Submit")
+    

@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chatContainer {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 40%;
+  padding: 5%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chatMessageContainer {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 4%;
+  border-radius: 45px;
+}
+
+.chatHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inputForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.inputForm input {
+  padding: 10px;
+  border-radius: 15px;
+}
+
+
