@@ -5,7 +5,7 @@ block content
     h1= title
       h4 Welcome to #{title}
     div.chatContainer
-      each chat in chats
+      each chat in chats.reverse()
         div.chatMessageContainer
           div.chatHeader
             h3= chat.name
@@ -15,8 +15,8 @@ block content
             p= chat.message
           div.chatFooter
       div.inputField 
-      form.inputForm(action="/new", method="POST")
-        input(type="text", name="name", placeholder="Name")
-        input(type="text", name="message", placeholder="Message")
-        input(type="submit", value="Submit")
-    
+    form.inputForm(action="/new", method="POST")
+      input(type="text", name="name", placeholder="Name")
+      input(type="text", name="message", placeholder="Message")
+      input(type="submit", value="Submit")
+  
